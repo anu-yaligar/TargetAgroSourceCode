@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-sclale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/Logo.jpg">
+  <title>Target Agro Chemical</title>
+</head>
+<body>
+<header class="header">
+  <div class="logo-container">
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo1.jpg" style="height: 50px; margin-right: 10px"> ABOUT TARGET</a>
+  </div>
+  <div id="sideNav">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ourproducts.html">Our Products</a></li>
+        <li><a href="ourservices.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="menuBtn">
+    <img src="img/Menu1.png" id="menu">
+  </div>
+  <script>
+    var menuBtn =document.getElementById("menuBtn")
+    var sideNav =document.getElementById("sideNav")
+    var menu =document.getElementById("menu")
+
+    menuBtn.onclick = function (){
+      if(sideNav.style.right == "-250px"){
+        sideNav.style.right = "0";
+      }
+      else{
+        sideNav.style.right = "-250px";
+      }
+    }
+  </script>
+</header>
+
+<div class="banner-text">
+  <h1>About US</h1>
+  <p>Everything you need to know about our Company</p>
+<!--<div class="sub-btn">
+  <a href="founder.html"><span></span>Founder</a>
+  <a href="management.html"><span></span>Management</a>
+  <a href="gallery.html"><span></span>Gallery</a>
+</div>-->
+</div>
+<div class="col-12" style="font-size: 1.5rem; margin: 1rem auto; overflow: hidden; background: rgb(255, 255, 255);">
+<p>
+  <br>
+  <span style="margin-left: 10rem;font-size: 3rem;">
+    <b>T</b></span>arget Agro Chemical Company has been pioneers in Agriculture sector since 2024. We are leading manufacturers and suppliers of wide spectrum of Agriculture inputs including fertilisers, Pesticides, Nutrients (Major, Minor and Secondary), Organic Manure, Bio-fertilisers, Bio-pesticides and Bio-stimulants. Target products have been exported in Karnataka.
+    Aiming towards the best quality of farm produce, our committed scientists are keen to implement innovative technologies to create crop nutrition and plant protection products. Our products range from Agriculture to Horticulture and extended to animal husbandry and FMCG (Cleaning & Disinfection) moving towards organic era.
+    Our products are field tested and certified by various agricultural research Institutions and universities across the country and marketed under the brand name – “TARGET”, a popular brand among farming community since four decades.
+    Our recent extension includes an elevation to pharma grade equipment in manufacturing unit to uphold the quality assurance for our products. Target ensures a total quality management system that sets apart from our competitors."
+</p>
+</div>
+
+<script src="filter-products.js"></script>
+</body>
+</html>
