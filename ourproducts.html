@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:margin-left="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-sclale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/Logo.jpg">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <title>Target Agro Chemical</title>
+</head>
+<body>
+<header class="header-products">
+  <div class="logo-container">
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo1.jpg" style="height: 60px; margin-right: 20px"></a>
+  </div>
+  <div id="sideNav">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ourproducts.html">Our Products</a></li>
+        <li><a href="ourservices.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="menuBtn">
+    <img src="img/Menu1.png" id="menu">
+  </div>
+  <script>
+    var menuBtn =document.getElementById("menuBtn")
+    var sideNav =document.getElementById("sideNav")
+    var menu =document.getElementById("menu")
+
+    menuBtn.onclick = function (){
+      if(sideNav.style.right == "-250px"){
+        sideNav.style.right = "0";
+      }
+      else{
+        sideNav.style.right = "-250px";
+      }
+    }
+  </script>
+</header>
+
+<div class="container">
+  <h1>Our Products</h1>
+  <div class="search-box">
+    <i class="bx bx-search"></i>
+    <input type="text"  id="searchInput" placeholder="Search a product" oninput="searchProducts()">
+  </div>
+    <div class="sub-btn-product">
+      <!--<a href="#" onclick="filterProducts('All')"><span></span>All</a>-->
+      <a href="#" onclick="filterProducts('Insecticides')"><span></span>Insecticides</a>
+      <a href="#" onclick="filterProducts('Pesticides')"><span></span>Pesticides</a>
+      <a href="#" onclick="filterProducts('Sprayers')"><span></span>Sprayers</a>
+      <!--<a href="#" onclick="filterProducts('Seeds')"><span></span>Seeds</a>-->
+    </div>
+
+  <div class="images">
+    <div class="image-box" onclick="openPopup('DAMBDA')" data-name="DAMBDA (Lambda cyhalothrin 2.5% E C)" data-category="Insecticides">
+      <img src="img/Dambda.jpg" alt="">
+      <div class="overlay" >DAMBDA</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DAMLA 505')" data-name="(DAMLA 505) CHLOROPYRIPHOS 50% + CYPERMETHRIN 5%EC" data-category="Insecticides">
+      <img src="img/Damla%20505.jpg" alt="">
+      <div class="overlay">DAMLA 505</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DCETAMIPRID')" data-name="(DCETAMIPRID) Acetamiprid 20% SP" data-category="Pesticides">
+      <img src="img/Dcetamiprid.jpg" alt="">
+      <div class="overlay">DCETAMIPRID</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DEFEN')" data-name="(DEFEN) FENVELRATE 0.4% DP" data-category="Insecticides">
+      <img src="img/Defen.jpg" alt="">
+      <div class="overlay">DEFEN</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DELCRON 50')" data-name="(DELCRON 50) Profenofos 50% E C" data-category="Pesticides">
+      <img src="img/Delcron%2050.jpg" alt="">
+      <div class="overlay">DELCRON 50</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DELCRON 404')" data-name="(DELCRON 404) Profenofos 40%+Cypermethrin 4% EC" data-category="Insecticides">
+      <img src="img/Delcron%20404.jpg" alt="">
+      <div class="overlay">DELCRON 404</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DELTHION')" data-name="(DELTHION) MALATHION 50% EC" data-category="Insecticides">
+      <img src="img/Delthion.jpg" alt="">
+      <div class="overlay">DELTHION EC</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DELTHION')" data-name="(DELTHION) MALATHION 5% DP" data-category="Insecticides">
+      <img src="img/Delthion%203.jpg" alt="">
+      <div class="overlay">DELTHION DP</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('DEMIDA')" data-name="(DEMIDA) IMIDACLOPRID 17.8% SC" data-category="Pesticides">
+      <img src="img/Demida.jpg" alt="">
+      <div class="overlay">DEMIDA</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('PROLINE')" data-name="(PROLINE)" data-category="Pesticides">
+      <img src="img/Proline.jpg" alt="">
+      <div class="overlay">PROLINE</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('SPRAYER')" data-name="(SPRAYER)" data-category="Sprayers">
+      <img src="img/sprayer.jpg" alt="">
+      <div class="overlay">SPRAYER</div>
+    </div>
+
+    <div class="image-box" onclick="openPopup('SPRAYERS')" data-name="(SPRAYERS)" data-category="Sprayers">
+      <img src="img/Sprayers.jpg" alt="">
+      <div class="overlay">SPRAYERS</div>
+    </div>
+  </div>
+
+  <div class="overlay-popup" id="popupOverlay" onclick="closePopup()"></div>
+  <div class="popup" id="popup">
+    <div class="popup-header"></div>
+    <span class="close-icon" onclick="closePopup()" style="color: #f9f9f9; transition: all 0.1s ease-in-out">&#10006;</span>
+    <img src="" alt="Product Image" id="popupImage">
+    <p id="popupDescription" style="font-size: 20px"></p>
+    <div class="contactForm">
+
+    <form action="https://docs.google.com/spreadsheets/d/1vKzF0yKtaOKBTWXHZldkjx-aMRmcdYIdbbdcSWlUlNQ/edit?usp=sharing" method="POST">
+      <h2>Product Enquiry</h2>
+      <div class="inputBox">
+      <input type="text" name="" required="required">
+        <span>Name</span>
+      </div>
+      <div class="inputBox">
+      <input type="Email" name="" required="required">
+        <span>Email</span>
+      </div>
+      <div class="inputBox">
+        <input type="tel" name="" pattern="[0-9]{10}" required="required">
+        <span>Mobile Number</span>
+      </div>
+      <div class="inputBox">
+        <label for="city">Select City:</label>
+        <select id="city" name="city">
+          <option value="karnataka">Karnataka</option>
+          <option value="davangere">Davangere</option>
+          <option value="haveri">Haveri</option>
+          <option value="hubli">Hubli</option>
+          <option value="gadag">Gadag</option>
+          <option value="rona">Rona</option>
+          <option value="dharwad">Dharwad</option>
+          <option value="shivamogga">Shivamogga</option>
+          <option value="chitradurga">Chitradurga</option>
+          <option value="ranebennur">Ranebennur</option>
+          <option value="bagalkot">Bagalkot</option>
+          <option value="chikkodi">Chikkodi</option>
+          <option value="koppal">Koppal</option>
+          <option value="hospete">Hospete</option>
+          <option value="bangalore">Bangalore</option>
+        </select>
+      </div>
+      <div class="inputBox">
+      <textarea id="Message" name="" rows="5" required="required"></textarea>
+        <span>Enter Your Message</span>
+      </div>
+      <div class="inputBox" style="display: flex; justify-content:space-between; align-items: center;">
+      <input type="submit" name="" value="Submit">
+      </div>
+      <div class="form-Footer">
+        <button type="cancel" class="cancel-button" onclick="closePopup()">Cancel</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="copyright">
+    Copyright © <script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="" target="_blank">Targetinnovations</a>
+  </div>
+</footer>
+<script src="product-script.js"></script>
+<script src="filter-products.js"></script>
+<script src="popup-script.js"></script>
+</body>
+</html>
+

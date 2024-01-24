@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-sclale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/Logo.jpg">
+  <title>Target Agro Chemical</title>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-container">
+    <a class="navbar-brand" href="#">
+      <img src="img/Logo1.jpg" style="height: 50px; margin-right: 10px"> TARGET AGRO CHEMICAL</a>
+  </div>
+  <div id="sideNav">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="ourproducts.html">Our Products</a></li>
+        <li><a href="ourservices.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="menuBtn">
+    <img src="img/Menu1.png" id="menu">
+  </div>
+  <script>
+    var menuBtn =document.getElementById("menuBtn")
+    var sideNav =document.getElementById("sideNav")
+    var menu =document.getElementById("menu")
+
+    menuBtn.onclick = function (){
+      if(sideNav.style.right == "-250px"){
+        sideNav.style.right = "0";
+      }
+      else{
+        sideNav.style.right = "-250px";
+      }
+    }
+  </script>
+</header>
+<footer>
+  <div class="copyright">
+    Copyright © <script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="" target="_blank">Targetinnovations</a>
+  </div>
+</footer>
+<script src="filter-products.js"></script>
+</body>
+</html>
