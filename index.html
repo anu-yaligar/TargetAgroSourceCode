@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-sclale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/Logo.jpg">
+  <title>Target Agro Chemical</title>
+</head>
+<body>
+<section id="banner">
+  <img src="img/Logo.jpg" class="logo">
+  <div class="background-video">
+    <video autoplay loop muted playsinline>
+      <source src="img/Target%20video7.mp4" type="video/mp4">
+    </video>
+    <h1 class="responsive-heading">TARGET AGRO CHEMICAL
+    <a>Come Lets Grow Together</a></h1>
+  </div>
+</section>
+
+  <div id="sideNav">
+    <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="ourproducts.html">Our Products</a></li>
+      <li><a href="ourservices.html">Our Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </nav>
+  </div>
+  <div id="menuBtn">
+    <img src="img/Menu1.png" id="menu">
+  </div>
+  <script>
+    var menuBtn =document.getElementById("menuBtn")
+    var sideNav =document.getElementById("sideNav")
+    var menu =document.getElementById("menu")
+
+    menuBtn.onclick = function (){
+      if(sideNav.style.right == "-250px"){
+        sideNav.style.right = "0";
+      }
+      else{
+        sideNav.style.right = "-250px";
+      }
+    }
+  </script>
+<!--<footer>
+  <div class="copyright">
+    Copyright © <script>document.write(new Date().getFullYear());</script> All rights reserved | Powered by <a href="" target="_blank">Targetinnovations</a>
+  </div>
+</footer>-->
+
+<script src="Script.js"></script>
+</body>
+</html>
